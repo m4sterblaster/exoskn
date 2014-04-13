@@ -5,7 +5,6 @@ An open sourced space suit - project by Citizen Inventor, inspired by NASA Space
 
 Rationale and story behind the project, as well as forward looking roadmap, answers to my favourite questiions: who, what, why, when, how can all be found at the official website [http://exoskn.weebly.com]()
 
-
 ## What
 A spacesuit augmented by embedded electronics to extra vehicular activities (EVA) 
 
@@ -14,6 +13,7 @@ Using arduino + sensors, any other COTS wearable and creative thinking to augmen
 
 Please follow through to the website for the details: [http://exoskn.weebly.com/the-project.html]()
 
-# Dependencies (a copy in lib directory)
+# Dependencies 
+Dependencies lives in the lib directory
 * TimedAction (LGPL): http://playground.arduino.cc/Code/TimedAction
 
