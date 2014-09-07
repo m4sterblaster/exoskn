@@ -241,11 +241,11 @@
    <LINK srcnodeid="43" srcpinname="Y Output Value" dstnodeid="41" dstpinname="FilterTime">
    </LINK>
    <NODE systemname="plot" filename="subpatches\plot.v4p" componentmode="InAWindow" id="56" nodename="subpatches\plot.v4p">
-   <BOUNDS type="Node" left="15345" top="7725" width="100" height="100">
+   <BOUNDS type="Node" left="14940" top="7980" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="15345" top="7725" width="4800" height="3600">
+   <BOUNDS type="Box" left="14940" top="7980" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="4845" top="2820" width="10950" height="8100">
+   <BOUNDS type="Window" left="870" top="1965" width="10950" height="8100">
    </BOUNDS>
    <PIN pinname="Points" visible="1">
    </PIN>
@@ -270,7 +270,7 @@
    </NODE>
    <LINK srcnodeid="56" srcpinname="Points" dstnodeid="57" dstpinname="Layers">
    </LINK>
-   <LINK srcnodeid="22" srcpinname="Output" dstnodeid="56" dstpinname="x">
+   <LINK srcnodeid="22" srcpinname="Output" dstnodeid="56" dstpinname="Input">
    </LINK>
    <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="58">
    <BOUNDS type="Node" left="5895" top="8040" width="100" height="100">
@@ -293,7 +293,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="5460" top="10635" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="4845" top="2820" width="10950" height="8100">
+   <BOUNDS type="Window" left="870" top="1965" width="10950" height="8100">
    </BOUNDS>
    <PIN pinname="Points" visible="1">
    </PIN>
@@ -301,9 +301,9 @@
    </PIN>
    <PIN pinname="Frame Count" slicecount="1" values="100">
    </PIN>
-   <PIN pinname="Source Minimum" visible="1" slicecount="1" values="1002.5">
+   <PIN pinname="Source Minimum" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Source Maximum" visible="1" slicecount="1" values="1010.6">
+   <PIN pinname="Source Maximum" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE systemname="Renderer (GDI)" nodename="Renderer (GDI)" componentmode="InABox" id="61">
@@ -331,7 +331,7 @@
    </PIN>
    <PIN pinname="Points" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="4845" top="2820" width="10950" height="8100">
+   <BOUNDS type="Window" left="870" top="1965" width="10950" height="8100">
    </BOUNDS>
    </NODE>
    <NODE systemname="Renderer (GDI)" nodename="Renderer (GDI)" componentmode="InABox" id="68">
@@ -402,9 +402,9 @@
    </LINK>
    <LINK srcnodeid="74" srcpinname="Output" dstnodeid="65" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="58" srcpinname="Output" dstnodeid="59" dstpinname="x">
+   <LINK srcnodeid="58" srcpinname="Output" dstnodeid="59" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="65" srcpinname="Output" dstnodeid="64" dstpinname="x">
+   <LINK srcnodeid="65" srcpinname="Output" dstnodeid="64" dstpinname="Input">
    </LINK>
    <NODE systemname="Running" filename="subpatches\Running.v4p" nodename="subpatches\Running.v4p" componentmode="InAWindow" id="97">
    <BOUNDS type="Node" left="7185" top="8970" width="100" height="100">
@@ -418,12 +418,8 @@
    </NODE>
    <LINK srcnodeid="58" srcpinname="Output" dstnodeid="97" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="97" srcpinname="Min" dstnodeid="59" dstpinname="Source Maximum">
-   </LINK>
-   <LINK srcnodeid="97" srcpinname="Max" dstnodeid="59" dstpinname="Source Minimum">
-   </LINK>
    <NODE systemname="Running" filename="subpatches\Running.v4p" nodename="subpatches\Running.v4p" componentmode="InAWindow" id="99">
-   <BOUNDS type="Node" left="13710" top="8265" width="100" height="100">
+   <BOUNDS type="Node" left="13035" top="6900" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -441,5 +437,9 @@
    <LINK srcnodeid="99" srcpinname="Min" dstnodeid="56" dstpinname="Source Minimum">
    </LINK>
    <LINK srcnodeid="99" srcpinname="Min" dstnodeid="75" dstpinname="Source Minimum">
+   </LINK>
+   <LINK srcnodeid="97" srcpinname="Min" dstnodeid="59" dstpinname="Source Minimum">
+   </LINK>
+   <LINK srcnodeid="97" srcpinname="Max" dstnodeid="59" dstpinname="Source Maximum">
    </LINK>
    </PATCH>
