@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
-   <PATCH nodename="C:\Program Portable\vvvv_45beta32.1_x64\vvvv_45beta32.1_x64\exoskin.v4p" systemname="exoskin" filename="C:\Users\m4sterblaster\Downloads\vvvv_45beta32.1_x64\vvvv_45beta32.1_x64\exoskin.v4p">
-   <BOUNDS type="Window" left="4185" top="2520" width="12945" height="11865">
+   <PATCH nodename="C:\Users\ldeb\Documents\GitHub\exoskn\vvvv\root.v4p" systemname="exoskin" filename="C:\Users\m4sterblaster\Downloads\vvvv_45beta32.1_x64\vvvv_45beta32.1_x64\exoskin.v4p">
+   <BOUNDS type="Window" left="720" top="825" width="12945" height="11700">
    </BOUNDS>
    <NODE systemname="Arduino (Devices StandardFirmata 2.x)" filename="%VVVV%\addonpack\lib\nodes\modules\Devices\Arduino (Devices StandardFirmata 2.x).v4p" nodename="Arduino (Devices StandardFirmata 2.x)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="6120" top="6735" width="100" height="100">
@@ -240,12 +240,12 @@
    </NODE>
    <LINK srcnodeid="43" srcpinname="Y Output Value" dstnodeid="41" dstpinname="FilterTime">
    </LINK>
-   <NODE systemname="plot" filename="%VVVV%\subpatches\plot.v4p" componentmode="InAWindow" id="56" nodename="%VVVV%\subpatches\plot.v4p">
+   <NODE systemname="plot" filename="subpatches\plot.v4p" componentmode="InAWindow" id="56" nodename="subpatches\plot.v4p">
    <BOUNDS type="Node" left="15345" top="7725" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="15345" top="7725" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="4635" top="7005" width="10950" height="8100">
+   <BOUNDS type="Window" left="4845" top="2820" width="10950" height="8100">
    </BOUNDS>
    <PIN pinname="Points" visible="1">
    </PIN>
@@ -288,12 +288,12 @@
    </LINK>
    <LINK srcnodeid="13" srcpinname="Output" dstnodeid="22" dstpinname="Input">
    </LINK>
-   <NODE systemname="plot" filename="%VVVV%\subpatches\plot.v4p" componentmode="InAWindow" id="59" nodename="%VVVV%\subpatches\plot.v4p">
+   <NODE systemname="plot" filename="subpatches\plot.v4p" componentmode="InAWindow" id="59" nodename="subpatches\plot.v4p">
    <BOUNDS type="Node" left="5460" top="10635" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="5460" top="10635" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="4635" top="7005" width="10950" height="8100">
+   <BOUNDS type="Window" left="4845" top="2820" width="10950" height="8100">
    </BOUNDS>
    <PIN pinname="Points" visible="1">
    </PIN>
@@ -318,7 +318,7 @@
    </NODE>
    <LINK srcnodeid="59" srcpinname="Points" dstnodeid="61" dstpinname="Layers">
    </LINK>
-   <NODE systemname="plot" filename="%VVVV%\subpatches\plot.v4p" nodename="%VVVV%\subpatches\plot.v4p" componentmode="InAWindow" id="64">
+   <NODE systemname="plot" filename="subpatches\plot.v4p" nodename="subpatches\plot.v4p" componentmode="InAWindow" id="64">
    <BOUNDS type="Node" left="21480" top="11685" width="100" height="100">
    </BOUNDS>
    <PIN pinname="x" visible="1" slicecount="1" values="-0">
@@ -331,6 +331,8 @@
    </PIN>
    <PIN pinname="Points" visible="1">
    </PIN>
+   <BOUNDS type="Window" left="4845" top="2820" width="10950" height="8100">
+   </BOUNDS>
    </NODE>
    <NODE systemname="Renderer (GDI)" nodename="Renderer (GDI)" componentmode="InABox" id="68">
    <BOUNDS type="Node" left="21480" top="13005" width="100" height="100">
@@ -384,7 +386,7 @@
    <LINKPOINT x="12150" y="7942">
    </LINKPOINT>
    </LINK>
-   <NODE systemname="runningmin" filename="%VVVV%\subpatches\runningmin.v4p" componentmode="InAWindow" id="82" nodename="%VVVV%\subpatches\runningmin.v4p">
+   <NODE systemname="runningmin" filename="subpatches\runningmin.v4p" componentmode="InAWindow" id="82" nodename="subpatches\runningmin.v4p">
    <BOUNDS type="Node" left="14070" top="6735" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="14070" top="6735" width="4800" height="3600">
@@ -404,7 +406,7 @@
    </LINK>
    <LINK srcnodeid="82" srcpinname="Output" dstnodeid="75" dstpinname="Source Minimum">
    </LINK>
-   <NODE systemname="runningmax" filename="%VVVV%\subpatches\runningmax.v4p" nodename="%VVVV%\subpatches\runningmax.v4p" componentmode="InAWindow" id="87">
+   <NODE systemname="runningmax" filename="subpatches\runningmax.v4p" nodename="subpatches\runningmax.v4p" componentmode="InAWindow" id="87">
    <BOUNDS type="Node" left="12885" top="6810" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Reset" visible="1" slicecount="1" values="0">
@@ -413,14 +415,14 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="9420" top="2745" width="9000" height="6000">
+   <BOUNDS type="Window" left="2850" top="1410" width="9000" height="6000">
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="22" srcpinname="Output" dstnodeid="87" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="87" srcpinname="Output" dstnodeid="56" dstpinname="Source Maximum">
    </LINK>
-   <NODE systemname="runningmax" filename="%VVVV%\subpatches\runningmax.v4p" nodename="%VVVV%\subpatches\runningmax.v4p" componentmode="InAWindow" id="88">
+   <NODE systemname="runningmax" filename="subpatches\runningmax.v4p" nodename="subpatches\runningmax.v4p" componentmode="InAWindow" id="88">
    <BOUNDS type="Node" left="5805" top="9825" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
@@ -429,12 +431,14 @@
    </PIN>
    <PIN pinname="Reset" slicecount="1" values="0">
    </PIN>
+   <BOUNDS type="Window" left="2850" top="1410" width="9000" height="6000">
+   </BOUNDS>
    </NODE>
    <LINK srcnodeid="58" srcpinname="Output" dstnodeid="88" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="88" srcpinname="Output" dstnodeid="59" dstpinname="Source Maximum">
    </LINK>
-   <NODE systemname="runningmin" filename="%VVVV%\subpatches\runningmin.v4p" nodename="%VVVV%\subpatches\runningmin.v4p" componentmode="InAWindow" id="89">
+   <NODE systemname="runningmin" filename="subpatches\runningmin.v4p" nodename="subpatches\runningmin.v4p" componentmode="InAWindow" id="89">
    <BOUNDS type="Node" left="7035" top="9810" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
