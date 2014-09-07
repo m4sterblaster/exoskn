@@ -133,9 +133,9 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -145,7 +145,7 @@
    <LINK srcnodeid="11" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Enable">
    </LINK>
    <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="13">
-   <BOUNDS type="Node" left="3060" top="7320" width="100" height="100">
+   <BOUNDS type="Node" left="6120" top="7515" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -157,9 +157,9 @@
    <LINK srcnodeid="0" srcpinname="Analog In" dstnodeid="13" dstpinname="Input">
    </LINK>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="14">
-   <BOUNDS type="Node" left="3465" top="8175" width="100" height="100">
+   <BOUNDS type="Node" left="6105" top="8265" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="3465" top="8175" width="795" height="960">
+   <BOUNDS type="Box" left="6105" top="8265" width="750" height="3690">
    </BOUNDS>
    <PIN pinname="Rows" slicecount="1" values="4">
    </PIN>
@@ -171,19 +171,11 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Analog Outputs|">
    </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="13" srcpinname="Output" dstnodeid="14" dstpinname="Y Input Value">
    </LINK>
-   <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="22">
-   <BOUNDS type="Node" left="13410" top="6105" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="6" values="1021,148,1023,0,1006,0">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Flex">
-   </PIN>
-   </NODE>
    <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="37">
    <BOUNDS type="Node" left="9210" top="5685" width="100" height="100">
    </BOUNDS>
@@ -241,9 +233,9 @@
    <LINK srcnodeid="43" srcpinname="Y Output Value" dstnodeid="41" dstpinname="FilterTime">
    </LINK>
    <NODE systemname="plot" filename="subpatches\plot.v4p" componentmode="InAWindow" id="56" nodename="subpatches\plot.v4p">
-   <BOUNDS type="Node" left="14940" top="7980" width="100" height="100">
+   <BOUNDS type="Node" left="10980" top="11550" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="14940" top="7980" width="4800" height="3600">
+   <BOUNDS type="Box" left="10980" top="11550" width="4800" height="3600">
    </BOUNDS>
    <BOUNDS type="Window" left="870" top="1965" width="10950" height="8100">
    </BOUNDS>
@@ -257,41 +249,29 @@
    </PIN>
    <PIN pinname="Source Maximum" visible="1" slicecount="1" values="908">
    </PIN>
+   <PIN pinname="Input" slicecount="1" visible="1" values="0">
+   </PIN>
    </NODE>
    <NODE systemname="Renderer (GDI)" nodename="Renderer (GDI)" componentmode="InABox" id="57">
-   <BOUNDS type="Node" left="16155" top="8205" width="100" height="100">
+   <BOUNDS type="Node" left="6915" top="10995" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="16155" top="8205" width="4125" height="3015">
+   <BOUNDS type="Box" left="6915" top="10995" width="4005" height="945">
    </BOUNDS>
    <BOUNDS type="Window" left="16080" top="8535" width="6240" height="5010">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="56" srcpinname="Points" dstnodeid="57" dstpinname="Layers">
-   </LINK>
-   <LINK srcnodeid="22" srcpinname="Output" dstnodeid="56" dstpinname="Input">
-   </LINK>
-   <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="58">
-   <BOUNDS type="Node" left="5895" top="8040" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="6" values="1021,149,1023,0,1006,0">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Stretch">
-   </PIN>
-   <PIN pinname="Index" slicecount="1" values="3">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="58" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="22" dstpinname="Input">
+   <LINK srcnodeid="56" srcpinname="Points" dstnodeid="57" dstpinname="Layers" linkstyle="VHV">
+   <LINKPOINT x="11285" y="11900">
+   </LINKPOINT>
+   <LINKPOINT x="6670" y="11830">
+   </LINKPOINT>
    </LINK>
    <NODE systemname="plot" filename="subpatches\plot.v4p" componentmode="InAWindow" id="59" nodename="subpatches\plot.v4p">
-   <BOUNDS type="Node" left="5460" top="10635" width="100" height="100">
+   <BOUNDS type="Node" left="11010" top="8730" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="5460" top="10635" width="4800" height="3600">
+   <BOUNDS type="Box" left="11010" top="8730" width="4800" height="3600">
    </BOUNDS>
    <BOUNDS type="Window" left="870" top="1965" width="10950" height="8100">
    </BOUNDS>
@@ -305,21 +285,27 @@
    </PIN>
    <PIN pinname="Source Maximum" visible="1" slicecount="1" values="0">
    </PIN>
+   <PIN pinname="Input" slicecount="1" visible="1" values="0">
+   </PIN>
    </NODE>
    <NODE systemname="Renderer (GDI)" nodename="Renderer (GDI)" componentmode="InABox" id="61">
-   <BOUNDS type="Node" left="4920" top="11580" width="100" height="100">
+   <BOUNDS type="Node" left="6930" top="8280" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="4920" top="11580" width="4920" height="3915">
+   <BOUNDS type="Box" left="6930" top="8280" width="4035" height="885">
    </BOUNDS>
    <BOUNDS type="Window" left="11760" top="11250" width="6240" height="5010">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="59" srcpinname="Points" dstnodeid="61" dstpinname="Layers">
+   <LINK srcnodeid="59" srcpinname="Points" dstnodeid="61" dstpinname="Layers" linkstyle="VHV">
+   <LINKPOINT x="11045" y="8990">
+   </LINKPOINT>
+   <LINKPOINT x="6955" y="8965">
+   </LINKPOINT>
    </LINK>
    <NODE systemname="plot" filename="subpatches\plot.v4p" nodename="subpatches\plot.v4p" componentmode="InAWindow" id="64">
-   <BOUNDS type="Node" left="21480" top="11685" width="100" height="100">
+   <BOUNDS type="Node" left="16080" top="11085" width="100" height="100">
    </BOUNDS>
    <PIN pinname="x" visible="1" slicecount="1" values="-0">
    </PIN>
@@ -333,113 +319,323 @@
    </PIN>
    <BOUNDS type="Window" left="870" top="1965" width="10950" height="8100">
    </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="-1.11111111111111">
+   </PIN>
+   <PIN pinname="Point Colour" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <BOUNDS type="Box" left="16080" top="11085">
+   </BOUNDS>
    </NODE>
    <NODE systemname="Renderer (GDI)" nodename="Renderer (GDI)" componentmode="InABox" id="68">
-   <BOUNDS type="Node" left="21480" top="13005" width="100" height="100">
+   <BOUNDS type="Node" left="19995" top="9030" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="21480" top="13005" width="5220" height="4560">
+   <BOUNDS type="Box" left="19995" top="9030" width="5220" height="4560">
    </BOUNDS>
    <BOUNDS type="Window" left="21885" top="12630" width="6240" height="5010">
    </BOUNDS>
-   <PIN pinname="Layers" visible="1">
+   <PIN pinname="Layers" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <LINK srcnodeid="64" srcpinname="Points" dstnodeid="68" dstpinname="Layers">
-   </LINK>
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="69">
-   <BOUNDS type="Node" left="13770" top="13920" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="13770" top="13920" width="795" height="240">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="-0.216475095785444">
-   </PIN>
-   </NODE>
-   <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="74">
-   <BOUNDS type="Node" left="13575" top="11475" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Source Minimum" visible="1" slicecount="1" values="1002.5">
-   </PIN>
-   <PIN pinname="Source Maximum" visible="1" slicecount="1" values="1010.6">
-   </PIN>
-   <PIN pinname="Input" visible="1" slicecount="1" values="1007">
-   </PIN>
-   <PIN pinname="Destination Minimum" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="75">
-   <BOUNDS type="Node" left="14370" top="10605" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Source Minimum" visible="1" slicecount="1" values="405.1">
-   </PIN>
-   <PIN pinname="Source Maximum" visible="1" slicecount="1" values="908">
-   </PIN>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Destination Minimum" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="22" srcpinname="Output" dstnodeid="75" dstpinname="Input">
-   <LINKPOINT x="12150" y="7942">
-   </LINKPOINT>
-   </LINK>
-   <NODE systemname="Subtract (Value)" nodename="Subtract (Value)" componentmode="Hidden" id="65">
-   <BOUNDS type="Node" left="14955" top="12225" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="0.111111111111108">
-   </PIN>
-   <PIN pinname="Input 2" visible="1" slicecount="1" values="-0.21875">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="65" srcpinname="Output" dstnodeid="69" dstpinname="Y Input Value">
-   </LINK>
-   <LINK srcnodeid="75" srcpinname="Output" dstnodeid="65" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="74" srcpinname="Output" dstnodeid="65" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="58" srcpinname="Output" dstnodeid="59" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="65" srcpinname="Output" dstnodeid="64" dstpinname="Input">
-   </LINK>
    <NODE systemname="Running" filename="subpatches\Running.v4p" nodename="subpatches\Running.v4p" componentmode="InAWindow" id="97">
-   <BOUNDS type="Node" left="7185" top="8970" width="100" height="100">
+   <BOUNDS type="Node" left="11190" top="8265" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Min" visible="1">
    </PIN>
    <PIN pinname="Max" visible="1">
    </PIN>
+   <BOUNDS type="Box" left="11190" top="8265">
+   </BOUNDS>
    </NODE>
-   <LINK srcnodeid="58" srcpinname="Output" dstnodeid="97" dstpinname="Input">
-   </LINK>
    <NODE systemname="Running" filename="subpatches\Running.v4p" nodename="subpatches\Running.v4p" componentmode="InAWindow" id="99">
-   <BOUNDS type="Node" left="13035" top="6900" width="100" height="100">
+   <BOUNDS type="Node" left="11160" top="11085" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Max" visible="1">
    </PIN>
    <PIN pinname="Min" visible="1">
    </PIN>
+   <BOUNDS type="Box" left="11160" top="11085">
+   </BOUNDS>
    </NODE>
-   <LINK srcnodeid="22" srcpinname="Output" dstnodeid="99" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="99" srcpinname="Max" dstnodeid="56" dstpinname="Source Maximum">
-   </LINK>
-   <LINK srcnodeid="99" srcpinname="Max" dstnodeid="75" dstpinname="Source Maximum">
+   <LINK srcnodeid="99" srcpinname="Max" dstnodeid="56" dstpinname="Source Maximum" linkstyle="VHV">
+   <LINKPOINT x="11985" y="11475">
+   </LINKPOINT>
+   <LINKPOINT x="11370" y="11475">
+   </LINKPOINT>
    </LINK>
    <LINK srcnodeid="99" srcpinname="Min" dstnodeid="56" dstpinname="Source Minimum">
    </LINK>
-   <LINK srcnodeid="99" srcpinname="Min" dstnodeid="75" dstpinname="Source Minimum">
+   <LINK srcnodeid="97" srcpinname="Min" dstnodeid="59" dstpinname="Source Minimum" linkstyle="VHV">
+   <LINKPOINT x="10600" y="8420">
+   </LINKPOINT>
+   <LINKPOINT x="11840" y="8575">
+   </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="97" srcpinname="Min" dstnodeid="59" dstpinname="Source Minimum">
+   <LINK srcnodeid="97" srcpinname="Max" dstnodeid="59" dstpinname="Source Maximum" linkstyle="VHV">
+   <LINKPOINT x="11975" y="8725">
+   </LINKPOINT>
+   <LINKPOINT x="11425" y="8570">
+   </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="97" srcpinname="Max" dstnodeid="59" dstpinname="Source Maximum">
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="101" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="5625" top="8625" width="435" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5625" top="8625" width="405" height="255">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="Flex">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE systemname="Stallone (Spreads)" nodename="Stallone (Spreads)" componentmode="Hidden" id="102">
+   <BOUNDS type="Node" left="6825" top="7185" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output Count" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 2" visible="1">
+   </PIN>
+   <PIN pinname="Output 4" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="14" srcpinname="Y Output Value" dstnodeid="102" dstpinname="Input 1" linkstyle="VHV">
+   <LINKPOINT x="6135" y="7110">
+   </LINKPOINT>
+   <LINKPOINT x="6855" y="7110">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="102" srcpinname="Output 1" dstnodeid="97" dstpinname="Input" linkstyle="VHV">
+   <LINKPOINT x="6855" y="8115">
+   </LINKPOINT>
+   <LINKPOINT x="11220" y="8115">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="102" srcpinname="Output 1" dstnodeid="59" dstpinname="Input" linkstyle="VHV">
+   <LINKPOINT x="6855" y="8115">
+   </LINKPOINT>
+   <LINKPOINT x="11040" y="8115">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="102" srcpinname="Output 4" dstnodeid="99" dstpinname="Input" linkstyle="VHV">
+   <LINKPOINT x="7455" y="10935">
+   </LINKPOINT>
+   <LINKPOINT x="11190" y="10935">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="102" srcpinname="Output 4" dstnodeid="56" dstpinname="Input" linkstyle="VHV">
+   <LINKPOINT x="7455" y="10935">
+   </LINKPOINT>
+   <LINKPOINT x="11010" y="10935">
+   </LINKPOINT>
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="105" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="5310" top="11355" width="660" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5310" top="11355" width="660" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="Stretch">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="107">
+   <BOUNDS type="Node" left="13785" top="11520" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Source Minimum" visible="1">
+   </PIN>
+   <PIN pinname="Source Maximum" visible="1">
+   </PIN>
+   <PIN pinname="Destination Minimum" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Destination Maximum" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="108">
+   <BOUNDS type="Node" left="13785" top="8745" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Source Minimum" visible="1">
+   </PIN>
+   <PIN pinname="Source Maximum" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Destination Minimum" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="97" srcpinname="Min" dstnodeid="108" dstpinname="Source Minimum" linkstyle="VHV">
+   <LINKPOINT x="11220" y="8625">
+   </LINKPOINT>
+   <LINKPOINT x="13980" y="8625">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="97" srcpinname="Max" dstnodeid="108" dstpinname="Source Maximum" linkstyle="VHV">
+   <LINKPOINT x="12460" y="8623">
+   </LINKPOINT>
+   <LINKPOINT x="13700" y="8628">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="102" srcpinname="Output 1" dstnodeid="108" dstpinname="Input" linkstyle="VHV">
+   <LINKPOINT x="7270" y="8120">
+   </LINKPOINT>
+   <LINKPOINT x="13400" y="8125">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="102" srcpinname="Output 4" dstnodeid="107" dstpinname="Input" linkstyle="VHV">
+   <LINKPOINT x="7455" y="10935">
+   </LINKPOINT>
+   <LINKPOINT x="13815" y="10935">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="99" srcpinname="Min" dstnodeid="107" dstpinname="Source Minimum" linkstyle="VHV">
+   <LINKPOINT x="11190" y="11430">
+   </LINKPOINT>
+   <LINKPOINT x="13980" y="11430">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="99" srcpinname="Max" dstnodeid="107" dstpinname="Source Maximum" linkstyle="VHV">
+   <LINKPOINT x="12380" y="11420">
+   </LINKPOINT>
+   <LINKPOINT x="13570" y="11425">
+   </LINKPOINT>
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="109" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="13215" top="9420" width="6885" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="13215" top="9420" width="2370" height="1110">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|We assume that the Min and Max values correspond to the stretched and tensed positions, which we map to 1 and -1 respectively|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="110" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="13575" top="11910" width="6030" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="13575" top="11910" width="1725" height="885">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Stretch sensor has increasing resistance with increasing bend, so we map to [1, -1]|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="111" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="13680" top="7470" width="5835" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="13680" top="7470" width="1650" height="990">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Flex sensor has decreasing resistance with increasing bend, so we map to [-1, 1]|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="107" srcpinname="Output" dstnodeid="64" dstpinname="Input" linkstyle="VHV">
+   <LINKPOINT x="13815" y="11880">
+   </LINKPOINT>
+   <LINKPOINT x="16110" y="11880">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="120">
+   <BOUNDS type="Node" left="16635" top="11475" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="16635" top="11475" width="2250" height="480">
+   </BOUNDS>
+   <PIN pinname="Color Output" visible="1">
+   </PIN>
+   <PIN pinname="Chooser Style" slicecount="1" values="RGBASlider">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="120" srcpinname="Color Output" dstnodeid="64" dstpinname="Point Colour">
+   </LINK>
+   <NODE systemname="plot" filename="subpatches\plot.v4p" nodename="subpatches\plot.v4p" componentmode="InAWindow" id="121">
+   <BOUNDS type="Node" left="16080" top="9375" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="16080" top="9375">
+   </BOUNDS>
+   <PIN pinname="Point Colour" visible="1">
+   </PIN>
+   <PIN pinname="Points" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="108" srcpinname="Output" dstnodeid="121" dstpinname="Input" linkstyle="VHV">
+   <LINKPOINT x="13570" y="9180">
+   </LINKPOINT>
+   <LINKPOINT x="16355" y="9180">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="123">
+   <BOUNDS type="Node" left="16620" top="8520" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="16620" top="8520" width="2250" height="480">
+   </BOUNDS>
+   <PIN pinname="Color Output" visible="1">
+   </PIN>
+   <PIN pinname="Color Input" slicecount="1" values="|0.00000,0.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Chooser Style" slicecount="1" values="RGBASlider">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="123" srcpinname="Color Output" dstnodeid="121" dstpinname="Point Colour">
+   </LINK>
+   <NODE systemname="Group (GDI)" nodename="Group (GDI)" componentmode="Hidden" id="126">
+   <BOUNDS type="Node" left="18285" top="10395" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="121" srcpinname="Points" dstnodeid="126" dstpinname="Layer 1" linkstyle="VHV">
+   <LINKPOINT x="16140" y="10005">
+   </LINKPOINT>
+   <LINKPOINT x="18285" y="10005">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="64" srcpinname="Points" dstnodeid="126" dstpinname="Layer 2" linkstyle="VHV">
+   <LINKPOINT x="16110" y="10260">
+   </LINKPOINT>
+   <LINKPOINT x="18555" y="10260">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="126" srcpinname="Layer" dstnodeid="68" dstpinname="Layers" linkstyle="VHV">
+   <LINKPOINT x="18315" y="10860">
+   </LINKPOINT>
+   <LINKPOINT x="20025" y="10860">
+   </LINKPOINT>
    </LINK>
    </PATCH>
