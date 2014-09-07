@@ -2,7 +2,8 @@
 # VVVV
 #################
 
-*~.xml # vvvv backup files
+# vvvv backup files
+*~.xml
 
 
 #################
