@@ -386,74 +386,6 @@
    <LINKPOINT x="12150" y="7942">
    </LINKPOINT>
    </LINK>
-   <NODE systemname="runningmin" filename="subpatches\runningmin.v4p" componentmode="InAWindow" id="82" nodename="subpatches\runningmin.v4p">
-   <BOUNDS type="Node" left="14070" top="6735" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="14070" top="6735" width="4800" height="3600">
-   </BOUNDS>
-   <BOUNDS type="Window" left="7665" top="3780" width="9000" height="6000">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Reset" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="22" srcpinname="Output" dstnodeid="82" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="82" srcpinname="Output" dstnodeid="56" dstpinname="Source Minimum">
-   </LINK>
-   <LINK srcnodeid="82" srcpinname="Output" dstnodeid="75" dstpinname="Source Minimum">
-   </LINK>
-   <NODE systemname="runningmax" filename="subpatches\runningmax.v4p" nodename="subpatches\runningmax.v4p" componentmode="InAWindow" id="87">
-   <BOUNDS type="Node" left="12885" top="6810" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Reset" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <BOUNDS type="Window" left="2850" top="1410" width="9000" height="6000">
-   </BOUNDS>
-   </NODE>
-   <LINK srcnodeid="22" srcpinname="Output" dstnodeid="87" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="87" srcpinname="Output" dstnodeid="56" dstpinname="Source Maximum">
-   </LINK>
-   <NODE systemname="runningmax" filename="subpatches\runningmax.v4p" nodename="subpatches\runningmax.v4p" componentmode="InAWindow" id="88">
-   <BOUNDS type="Node" left="5805" top="9825" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Reset" slicecount="1" values="0">
-   </PIN>
-   <BOUNDS type="Window" left="2850" top="1410" width="9000" height="6000">
-   </BOUNDS>
-   </NODE>
-   <LINK srcnodeid="58" srcpinname="Output" dstnodeid="88" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="88" srcpinname="Output" dstnodeid="59" dstpinname="Source Maximum">
-   </LINK>
-   <NODE systemname="runningmin" filename="subpatches\runningmin.v4p" nodename="subpatches\runningmin.v4p" componentmode="InAWindow" id="89">
-   <BOUNDS type="Node" left="7035" top="9810" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Reset" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="58" srcpinname="Output" dstnodeid="89" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="89" srcpinname="Output" dstnodeid="59" dstpinname="Source Minimum">
-   </LINK>
-   <LINK srcnodeid="87" srcpinname="Output" dstnodeid="75" dstpinname="Source Maximum">
-   </LINK>
    <NODE systemname="Subtract (Value)" nodename="Subtract (Value)" componentmode="Hidden" id="65">
    <BOUNDS type="Node" left="14955" top="12225" width="100" height="100">
    </BOUNDS>
@@ -473,5 +405,41 @@
    <LINK srcnodeid="58" srcpinname="Output" dstnodeid="59" dstpinname="x">
    </LINK>
    <LINK srcnodeid="65" srcpinname="Output" dstnodeid="64" dstpinname="x">
+   </LINK>
+   <NODE systemname="Running" filename="subpatches\Running.v4p" nodename="subpatches\Running.v4p" componentmode="InAWindow" id="97">
+   <BOUNDS type="Node" left="7185" top="8970" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Min" visible="1">
+   </PIN>
+   <PIN pinname="Max" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="58" srcpinname="Output" dstnodeid="97" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="97" srcpinname="Min" dstnodeid="59" dstpinname="Source Maximum">
+   </LINK>
+   <LINK srcnodeid="97" srcpinname="Max" dstnodeid="59" dstpinname="Source Minimum">
+   </LINK>
+   <NODE systemname="Running" filename="subpatches\Running.v4p" nodename="subpatches\Running.v4p" componentmode="InAWindow" id="99">
+   <BOUNDS type="Node" left="13710" top="8265" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Max" visible="1">
+   </PIN>
+   <PIN pinname="Min" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="22" srcpinname="Output" dstnodeid="99" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="99" srcpinname="Max" dstnodeid="56" dstpinname="Source Maximum">
+   </LINK>
+   <LINK srcnodeid="99" srcpinname="Max" dstnodeid="75" dstpinname="Source Maximum">
+   </LINK>
+   <LINK srcnodeid="99" srcpinname="Min" dstnodeid="56" dstpinname="Source Minimum">
+   </LINK>
+   <LINK srcnodeid="99" srcpinname="Min" dstnodeid="75" dstpinname="Source Minimum">
    </LINK>
    </PATCH>
