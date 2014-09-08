@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
-   <PATCH nodename="C:\Users\ldeb\Documents\GitHub\exoskn\vvvv\root.v4p" systemname="exoskin" filename="C:\Users\m4sterblaster\Downloads\vvvv_45beta32.1_x64\vvvv_45beta32.1_x64\exoskin.v4p">
-   <BOUNDS type="Window" left="720" top="825" width="12945" height="11700">
+   <PATCH nodename="D:\devsrc\exoskn\vvvv\root.v4p" systemname="exoskin" filename="C:\Users\m4sterblaster\Downloads\vvvv_45beta32.1_x64\vvvv_45beta32.1_x64\exoskin.v4p">
+   <BOUNDS type="Window" left="990" top="1935" width="12945" height="11700">
    </BOUNDS>
    <NODE systemname="Arduino (Devices StandardFirmata 2.x)" filename="%VVVV%\addonpack\lib\nodes\modules\Devices\Arduino (Devices StandardFirmata 2.x).v4p" nodename="Arduino (Devices StandardFirmata 2.x)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="6120" top="6735" width="100" height="100">
@@ -137,9 +137,9 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
+   <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -297,6 +297,8 @@
    </PIN>
    <BOUNDS type="Box" left="11190" top="8265">
    </BOUNDS>
+   <PIN pinname="Reset" visible="1">
+   </PIN>
    </NODE>
    <NODE systemname="Running" filename="subpatches\Running.v4p" nodename="subpatches\Running.v4p" componentmode="InAWindow" id="99">
    <BOUNDS type="Node" left="11160" top="11085" width="100" height="100">
@@ -309,6 +311,8 @@
    </PIN>
    <BOUNDS type="Box" left="11160" top="11085">
    </BOUNDS>
+   <PIN pinname="Reset" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="99" srcpinname="Max" dstnodeid="56" dstpinname="Source Maximum" linkstyle="VHV">
    <LINKPOINT x="11985" y="11475">
@@ -557,9 +561,11 @@
    </BOUNDS>
    <PIN pinname="Color Output" visible="1">
    </PIN>
-   <PIN pinname="Color Input" slicecount="1" values="|0.00000,0.00000,1.00000,1.00000|">
+   <PIN pinname="Color Input" slicecount="1" values="|0.87304,0.20944,0.51618,1.00000|">
    </PIN>
    <PIN pinname="Chooser Style" slicecount="1" values="RGBASlider">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Point Colour|">
    </PIN>
    </NODE>
    <LINK srcnodeid="123" srcpinname="Color Output" dstnodeid="121" dstpinname="Point Colour">
@@ -639,7 +645,7 @@
    </BOUNDS>
    <PIN pinname="Send String" slicecount="1" values="servo">
    </PIN>
-   <PIN pinname="Input Value" visible="1" slicecount="1" values="1">
+   <PIN pinname="Input Value" visible="1" slicecount="1" values="0.324137931034483">
    </PIN>
    </NODE>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="136">
@@ -686,8 +692,36 @@
    <PIN pinname="Source Minimum" slicecount="1" values="-1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="139" srcpinname="Output" dstnodeid="134" dstpinname="Input Value">
-   </LINK>
    <LINK srcnodeid="108" srcpinname="Output" dstnodeid="139" dstpinname="Input">
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="141">
+   <BOUNDS type="Node" left="12015" top="6540" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="12015" top="6540" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Reset MinMax|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="141" srcpinname="Y Output Value" dstnodeid="97" dstpinname="Reset" linkstyle="VHV">
+   <LINKPOINT x="12030" y="7635">
+   </LINKPOINT>
+   <LINKPOINT x="12015" y="7635">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="141" srcpinname="Y Output Value" dstnodeid="99" dstpinname="Reset" linkstyle="VHV">
+   <LINKPOINT x="12030" y="9053">
+   </LINKPOINT>
+   <LINKPOINT x="11985" y="9053">
+   </LINKPOINT>
    </LINK>
    </PATCH>
