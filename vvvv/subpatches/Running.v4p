@@ -1,0 +1,163 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
+   <PATCH nodename="C:\Users\ldeb\Documents\GitHub\exoskn\vvvv\subpatches\Running.v4p" systemname="Running" filename="C:\Users\ldeb\Documents\GitHub\exoskn\vvvv\subpatches\Running.v4p">
+   <BOUNDS type="Window" left="2415" top="3225" width="9000" height="6000">
+   </BOUNDS>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="0">
+   <BOUNDS type="Node" left="2835" top="345" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2835" top="345" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Input">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Min (Value)" nodename="Min (Value)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="2205" top="1515" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Max (Value)" nodename="Max (Value)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="3705" top="1500" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Input 1" linkstyle="VHV">
+   <LINKPOINT x="2805" y="1013">
+   </LINKPOINT>
+   <LINKPOINT x="2280" y="1073">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Y Output Value" dstnodeid="2" dstpinname="Input 1" linkstyle="VHV">
+   <LINKPOINT x="2850" y="1170">
+   </LINKPOINT>
+   <LINKPOINT x="3750" y="1230">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="4845" top="2280" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Default 1" slicecount="1" visible="1" values="-99999999999999">
+   </PIN>
+   <PIN pinname="Initialize" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="480" top="2100" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   <PIN pinname="Default 1" slicecount="1" visible="1" values="999999999999999">
+   </PIN>
+   <PIN pinname="Initialize" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="4" dstpinname="Input 1" linkstyle="VHV">
+   <LINKPOINT x="2050" y="1943">
+   </LINKPOINT>
+   <LINKPOINT x="695" y="1913">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Output 1" dstnodeid="1" dstpinname="Input 2" linkstyle="VHV">
+   <LINKPOINT x="490" y="1395">
+   </LINKPOINT>
+   <LINKPOINT x="2585" y="1395">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Output 1" dstnodeid="2" dstpinname="Input 2" linkstyle="VHV">
+   <LINKPOINT x="4850" y="1330">
+   </LINKPOINT>
+   <LINKPOINT x="4120" y="1340">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="3" dstpinname="Input 1" linkstyle="VHV">
+   <LINKPOINT x="3735" y="2025">
+   </LINKPOINT>
+   <LINKPOINT x="4875" y="2025">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="5">
+   <BOUNDS type="Node" left="2190" top="3210" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2190" top="3210" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Min">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="5" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="6">
+   <BOUNDS type="Node" left="3705" top="3195" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3705" top="3195" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Max">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="6" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Y Output Value" dstnodeid="3" dstpinname="Default 1" linkstyle="VHV">
+   <LINKPOINT x="2850" y="900">
+   </LINKPOINT>
+   <LINKPOINT x="5310" y="960">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Y Output Value" dstnodeid="4" dstpinname="Default 1" linkstyle="VHV">
+   <LINKPOINT x="2850" y="855">
+   </LINKPOINT>
+   <LINKPOINT x="945" y="915">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="9">
+   <BOUNDS type="Node" left="4500" top="270" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4500" top="270" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Press">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Reset">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Y Output Value" dstnodeid="3" dstpinname="Initialize" linkstyle="VHV">
+   <LINKPOINT x="4530" y="885">
+   </LINKPOINT>
+   <LINKPOINT x="5715" y="885">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Y Output Value" dstnodeid="4" dstpinname="Initialize" linkstyle="VHV">
+   <LINKPOINT x="4530" y="885">
+   </LINKPOINT>
+   <LINKPOINT x="1350" y="885">
+   </LINKPOINT>
+   </LINK>
+   <PACK Name="addonpack" Version="31.9.0">
+   </PACK>
+   </PATCH>

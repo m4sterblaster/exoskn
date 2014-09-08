@@ -1,15 +1,15 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
-   <PATCH nodename="C:\Program Portable\vvvv_45beta32.1_x64\vvvv_45beta32.1_x64\subpatches\plot.v4p" systemname="plot" filename="C:\Program Portable\vvvv_45beta32.1_x64\vvvv_45beta32.1_x64\subpatches\plot.v4p">
-   <BOUNDS type="Window" left="4635" top="7005" width="10950" height="8100">
+   <PATCH nodename="C:\Users\ldeb\Documents\GitHub\exoskn\vvvv\subpatches\plot.v4p" systemname="plot" filename="C:\Users\ldeb\Documents\GitHub\exoskn\vvvv\subpatches\plot.v4p">
+   <BOUNDS type="Window" left="870" top="1965" width="10950" height="8100">
    </BOUNDS>
    <PACK Name="addonpack" Version="31.9.0">
    </PACK>
    <NODE systemname="LinearSpread (Spreads)" nodename="LinearSpread (Spreads)" componentmode="Hidden" id="6">
-   <BOUNDS type="Node" left="4125" top="3735" width="100" height="100">
+   <BOUNDS type="Node" left="4110" top="5085" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Width" slicecount="1" values="2">
    </PIN>
-   <PIN pinname="Spread Count" slicecount="1" values="800" visible="1">
+   <PIN pinname="Spread Count" slicecount="1" visible="1" values="800">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -17,7 +17,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Point (GDI)" nodename="Point (GDI)" componentmode="Hidden" id="5">
-   <BOUNDS type="Node" left="4125" top="4425" width="750" height="270">
+   <BOUNDS type="Node" left="6060" top="5865" width="750" height="270">
    </BOUNDS>
    <PIN pinname="X" visible="1">
    </PIN>
@@ -27,8 +27,14 @@
    </PIN>
    <PIN pinname="Type" slicecount="1" values="Pixel">
    </PIN>
+   <PIN pinname="Pen Color" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="6" srcpinname="Output" dstnodeid="5" dstpinname="X">
+   <LINK srcnodeid="6" srcpinname="Output" dstnodeid="5" dstpinname="X" linkstyle="VHV">
+   <LINKPOINT x="4170" y="5595">
+   </LINKPOINT>
+   <LINKPOINT x="6060" y="5595">
+   </LINKPOINT>
    </LINK>
    <NODE systemname="Queue (Spreads)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Queue (Spreads)" componentmode="Hidden" id="4">
    <BOUNDS type="Node" left="5805" top="3030" width="100" height="100">
@@ -80,7 +86,7 @@
    <PIN pinname="X Input Value" slicecount="1" values="100">
    </PIN>
    </NODE>
-   <LINK srcnodeid="2" srcpinname="Y Output Value" dstnodeid="4" dstpinname="Frame Count">
+   <LINK srcnodeid="2" srcpinname="Y Output Value" dstnodeid="4" dstpinname="Frame Count" linkstyle="VHV">
    <LINKPOINT x="8415" y="2370">
    </LINKPOINT>
    <LINKPOINT x="6375" y="2370">
@@ -89,9 +95,9 @@
    <LINK srcnodeid="4" srcpinname="Output" dstnodeid="3" dstpinname="Input">
    </LINK>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="1">
-   <BOUNDS type="Node" left="3540" top="885" width="100" height="100">
+   <BOUNDS type="Node" left="5370" top="1665" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="3540" top="885" width="1275" height="240">
+   <BOUNDS type="Box" left="5370" top="1665" width="1275" height="240">
    </BOUNDS>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -112,16 +118,16 @@
    <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="1" srcpinname="Y Output Value" dstnodeid="3" dstpinname="Source Maximum">
-   <LINKPOINT x="4665" y="3440">
+   <LINK srcnodeid="1" srcpinname="Y Output Value" dstnodeid="3" dstpinname="Source Maximum" linkstyle="VHV">
+   <LINKPOINT x="5435" y="2660">
    </LINKPOINT>
-   <LINKPOINT x="5070" y="3445">
+   <LINKPOINT x="6145" y="2365">
    </LINKPOINT>
    </LINK>
    <NODE id="0" systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" hiddenwhenlocked="0" managers="">
-   <BOUNDS type="Node" left="5100" top="900" width="100" height="100">
+   <BOUNDS type="Node" left="3585" top="1665" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="5100" top="900" width="1245" height="240">
+   <BOUNDS type="Box" left="3585" top="1665" width="1245" height="240">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" pintype="Configuration" values="|Source Minimum|">
    </PIN>
@@ -194,42 +200,42 @@
    <PIN pinname="ID" pintype="Output" visible="-1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="Y Output Value" dstnodeid="3" dstpinname="Source Minimum">
-   <LINKPOINT x="5115" y="2430">
+   <LINK srcnodeid="0" srcpinname="Y Output Value" dstnodeid="3" dstpinname="Source Minimum" linkstyle="VHV">
+   <LINKPOINT x="4105" y="2940">
    </LINKPOINT>
-   <LINKPOINT x="5985" y="2430">
+   <LINKPOINT x="5480" y="2685">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="3" srcpinname="Output" dstnodeid="5" dstpinname="Y">
-   <LINKPOINT x="5835" y="4005">
+   <LINK srcnodeid="3" srcpinname="Output" dstnodeid="5" dstpinname="Y" linkstyle="VHV">
+   <LINKPOINT x="6222" y="4293">
    </LINKPOINT>
-   <LINKPOINT x="5835" y="4005">
+   <LINKPOINT x="6609" y="4581">
    </LINKPOINT>
-   <LINKPOINT x="5835" y="4230">
+   <LINKPOINT x="6996" y="5094">
    </LINKPOINT>
-   <LINKPOINT x="4320" y="4230">
+   <LINKPOINT x="5868" y="5382">
    </LINKPOINT>
    </LINK>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="8">
-   <BOUNDS type="Node" left="2250" top="2235" width="100" height="100">
+   <BOUNDS type="Node" left="2730" top="510" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="2250" top="2235" width="795" height="240">
+   <BOUNDS type="Box" left="2730" top="510" width="795" height="240">
    </BOUNDS>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="x">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Input">
    </PIN>
    </NODE>
-   <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="4" dstpinname="Input">
-   <LINKPOINT x="2265" y="2775">
+   <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="4" dstpinname="Input" linkstyle="VHV">
+   <LINKPOINT x="2760" y="2850">
    </LINKPOINT>
-   <LINKPOINT x="5820" y="2775">
+   <LINKPOINT x="5835" y="2850">
    </LINKPOINT>
    </LINK>
    <NODE systemname="IOBox (Node)" nodename="IOBox (Node)" componentmode="InABox" id="9">
-   <BOUNDS type="Node" left="4125" top="5430" width="100" height="100">
+   <BOUNDS type="Node" left="6060" top="6375" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="4125" top="5430" width="795" height="240">
+   <BOUNDS type="Box" left="6060" top="6375" width="795" height="240">
    </BOUNDS>
    <PIN pinname="Input Node" visible="1">
    </PIN>
@@ -238,12 +244,32 @@
    </NODE>
    <LINK srcnodeid="5" srcpinname="Layer" dstnodeid="9" dstpinname="Input Node">
    </LINK>
-   <LINK srcnodeid="2" srcpinname="Y Output Value" dstnodeid="6" dstpinname="Spread Count">
-   <LINKPOINT x="8415" y="3570">
+   <LINK srcnodeid="2" srcpinname="Y Output Value" dstnodeid="6" dstpinname="Spread Count" linkstyle="VHV">
+   <LINKPOINT x="8425" y="3960">
    </LINKPOINT>
-   <LINKPOINT x="5400" y="3555">
+   <LINKPOINT x="5390" y="4410">
    </LINKPOINT>
-   <LINKPOINT x="5400" y="3720">
+   </LINK>
+   <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="12">
+   <BOUNDS type="Node" left="6840" top="750" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6840" top="750" width="3465" height="480">
+   </BOUNDS>
+   <PIN pinname="Color Output" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Point Colour|">
+   </PIN>
+   <PIN pinname="Color Input" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Chooser Style" slicecount="1" values="RGBASlider">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="Color Output" dstnodeid="5" dstpinname="Pen Color" linkstyle="VHV">
+   <LINKPOINT x="6870" y="5370">
+   </LINKPOINT>
+   <LINKPOINT x="6615" y="5370">
    </LINKPOINT>
    </LINK>
    </PATCH>
